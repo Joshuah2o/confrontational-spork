@@ -38,10 +38,7 @@ Time Spent: 11 Hours
   - [X] GIF Walkthrough: 
 <img src='CSRF Exploit.gif' title='XSS Exploit' width='' alt='' />
   - [X] Steps to recreate: <br />
-        -create a new comment that includes the javascript code for a new form <br />
-        -below that comment create an iframe that will run the form when it loads <br />
-        -submit comment <br />
-        -refresh page <br /> 
+        -Start with creating a new comment that includes the javascript code for a new form. Next, below that comment, create an iframe that will run the form when it loads. Once that is complete, submit the comment. If nothing appears, try refreshing page. <br /> 
         
         Proof of Concept:
           <form action="http://wpdistillery.vm/wp-comments-post.php" method="post" id="commentform2" class="comment-form" novalidate>
