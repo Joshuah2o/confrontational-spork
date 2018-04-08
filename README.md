@@ -21,7 +21,7 @@
 <img src='XSS Exploit.gif' title='XSS Exploit' width='' alt='' />
   - [X] Steps to recreate: <br />
          -Leave a comment with the following content:<br />
-         *\<b onmouseover="alert('This is just a vulnerability')">click me!\</b>*
+         *\< b onmouseover="alert('This is just a vulnerability')">click me!\</b>*
          
   - [X] Affected source code:
     - [Link 1](https://github.com/WordPress/WordPress/blob/4.2-branch/wp-comments-post.php)
