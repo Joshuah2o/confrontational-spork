@@ -4,7 +4,7 @@
   - [x] Summary: 
     - Vulnerability types: Enumeration
     - Tested in version: Word Press 4.2
-    - Fixed in version: 
+    - Fixed in version: 4.2.1
   - [x] GIF Walkthrough: 
 <img src='WordPress Username Enumeration.gif' title='WordPress Username Enumeration' width='' alt='' />
   - [x] Steps to recreate: Start at a WordPress Login page. This vulnerability allows anyone the ability to enumerate a list of valid user names on a WordPress site. Start with typing "admin" and a random password, soon after you are alerted that there is an existing admin account, ultimately making it easier to brute force that admin password. 
