@@ -1,4 +1,8 @@
-# confrontational-spork
+# Project 7
+Time Spent: 11 Hours
+
+### Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+
 
 ### 1. Enumeration
   - [x] Summary: 
@@ -7,7 +11,7 @@
     - Fixed in version: 4.2.1
   - [x] GIF Walkthrough: 
 <img src='WordPress Username Enumeration.gif' title='WordPress Username Enumeration' width='' alt='' />
-  - [x] Steps to recreate: Start at a WordPress Login page. This vulnerability allows anyone the ability to enumerate a list of valid user names on a WordPress site. Start with typing "admin" and a random password, soon after you are alerted that there is an existing admin account, ultimately making it easier to brute force that admin password. 
+  - [x] Steps to recreate: <br /> Start at a WordPress Login page. This vulnerability allows anyone the ability to enumerate a list of valid user names on a WordPress site. Start with typing "admin" and a random password, soon after you are alerted that there is an existing admin account, ultimately making it easier to brute force that admin password. 
   - [ ] Affected source code:
     - [Link 1]
     
@@ -20,7 +24,7 @@
   - [X] GIF Walkthrough: 
 <img src='XSS Exploit.gif' title='XSS Exploit' width='' alt='' />
   - [X] Steps to recreate: <br />
-         -Leave a comment with the following content:<br />
+         First start by finding a post to leave a comment on. Next, leave a comment with the following content:<br />
          *\< b onmouseover="alert('This is just a vulnerability')">click me!\</b>*
          
   - [X] Affected source code:
