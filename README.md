@@ -1,6 +1,6 @@
 # confrontational-spork
 
-1. Enumeration
+### 1. Enumeration
   - [x] Summary: 
     - Vulnerability types: Enumeration
     - Tested in version: Word Press 4.2
@@ -12,7 +12,7 @@
     - [Link 1]
     
     
-1. 1. Authenticated Stored Cross-Site Scripting (XSS)
+### 1. Authenticated Stored Cross-Site Scripting (XSS)
   - [X] Summary: inject java script code as a comment 
     - Vulnerability types:XSS
     - Tested in version: 4.2
@@ -25,7 +25,7 @@
   - [X] Affected source code:
     - [Link 1](https://github.com/WordPress/WordPress/blob/4.2-branch/wp-comments-post.php)
     
-    1. (Required) Vulnerability Name
+### 1. (Required) Vulnerability Name
   - [ ] Summary: 
     - Vulnerability types: 
     - Tested in version: 
