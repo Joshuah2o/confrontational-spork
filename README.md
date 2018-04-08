@@ -1,6 +1,6 @@
 # confrontational-spork
 
-1. (Required) User Enumeration
+1. Enumeration
   - [x] Summary: 
     - Vulnerability types: Enumeration
     - Tested in version: Word Press 4.2
